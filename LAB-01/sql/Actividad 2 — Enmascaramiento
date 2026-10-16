@@ -1,0 +1,27 @@
+FROM clientes;
+
+SELECT * FROM v_clientes_soporte;
+
+GRANT USAGE
+ON SCHEMA public
+TO soporte;
+
+GRANT SELECT ON v_clientes_soporte TO soporte;
+
+REVOKE ALL ON clientes FROM soporte;
+
+SET ROLE soporte;
+
+SELECT * FROM clientes;
+
+SELECT
+    has_table_privilege(
+        'soporte',
+        'public.v_clientes_soporte',
+        'SELECT'
+    ) AS acceso_vista,
+    has_table_privilege(
+        'soporte',
+        'public.clientes',
+        'SELECT'
+    ) AS acceso_tabla_original;
