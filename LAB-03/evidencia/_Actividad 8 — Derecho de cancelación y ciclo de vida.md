@@ -1,0 +1,3 @@
+¿Por qué eliminar un registro de una tabla no necesariamente significa que toda la información relacionada con esa persona haya desaparecido de la organización? 
+
+Porque la información puede seguir guardada en respaldos, réplicas, reportes, archivos exportados o sistemas externos. Por eso, eliminar un registro de la tabla principal no garantiza que todos los datos relacionados con esa persona hayan desaparecido de la organización. 
