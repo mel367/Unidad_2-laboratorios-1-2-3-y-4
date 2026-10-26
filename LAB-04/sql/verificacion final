@@ -1,0 +1,11 @@
+SHOW port;
+SHOW listen_addresses;
+SHOW ssl;
+
+SELECT
+    rolname,
+    rolsuper,
+    rolcreaterole,
+    rolcreatedb
+FROM pg_roles
+WHERE rolname IN ('postgres', current_user, 'analista', 'soporte');
